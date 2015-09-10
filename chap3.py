@@ -37,4 +37,24 @@ def proj3_3():
 def proj3_4():
     print("This is a program that outputs the value of the epact of a 4-digit year.")
     year = eval(input("A four digit year: "))
+    c = year // 100
+    epact = (8 + (c // 4) - c + ((8 * c + 13) // 25) + 11 * (year % 19)) % 30
+    print("The epact is ", epact, "days")
+
+def proj3_5():
+    print("This is a program that will calculate the sum of 5 numbers")
+    n1, n2, n3, n4, n5 = eval(input("Input 5 numbers separated by commas: "))
+    sum = n1 + n2 + n3 + n4 + n5
+    print("The sum of the numbers is:", sum)
+
+def proj3_6():
+    print("This is a program that will approximate the value of pi / 4")
+    numberOfTerms = eval(input("How many terms should be used for the approximation? "))
+    expr = math.pi / 4
+    roundedExpr = round(expr, numberOfTerms)
+    error = math.pi - roundedExpr
+    print("The approximation is: ", roundedExpr)
+    print("The error would be: ", error)
+proj3_6()
+
 
