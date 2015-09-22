@@ -9,6 +9,10 @@ def proj4_1():
     window = GraphWin('Checkerboard', 400, 400)
     window.setCoords(0.0, 0.0, 8.0, 8.0)
     
+    rect1 = Rectangle(Point(-0.5, -0.5), Point(8.5, 8.5))
+    rect1.setFill('brown')
+    rect1.draw(window)
+    
     for i in range(0, 8):
         rect = Rectangle(Point(i, i), Point(i+1, i+1))
         rect.setFill('red')
