@@ -7,10 +7,10 @@ from graphics import *
 
 def proj4_1():
     window = GraphWin('Checkerboard', 400, 400)
-    window.setCoords(0.0, 0.0, 8.0, 8.0)
-    
+    window.setCoords(-0.5, -0.5, 8.5, 8.5)
+
     rect1 = Rectangle(Point(-0.5, -0.5), Point(8.5, 8.5))
-    rect1.setFill('brown')
+    rect1.setFill(color_rgb(165, 42, 42))
     rect1.draw(window)
     
     for i in range(0, 8):
@@ -136,3 +136,39 @@ def proj4_1():
     Line(Point(0,7), Point(8,7)).draw(window)
     Line(Point(0,8), Point(8,8)).draw(window)
 proj4_1()
+
+def proj4_2():
+    window = GraphWin('Halloween Scene', 400, 400)
+    window.setCoords(0,0,10,10)
+
+    face = Oval(Point(1.5, 3.5), Point(4.5, 5.5))
+    face.setFill('green')
+    face.draw(window)
+
+    eye1 = Oval(Point(2, 4.5), Point(2.5, 5))
+    eye1.setFill('yellow')
+    eye1.draw(window)
+    eye2 = eye1.clone()
+
+    eye2.move(1.5,0)
+    eye2.draw(window)
+
+    hat = Polygon(Point(3,8), Point(4,6), Point(2,6))
+    hat.setFill('black')
+    hat.draw(window)
+
+    oval = Oval(Point(1.5,5.2), Point(4.5,6.2))
+    oval.setFill('black')
+    oval.draw(window)
+
+    mouth = Oval(Point(2.5, 3.75), Point(3.5, 3.75))
+    mouth.setFill('black')
+    mouth.setOutline('black')
+    mouth.draw(window)
+    
+    nose = Oval(Point(2.75,3.5), Point(3.25,4.75))
+    nose.setFill("green")
+    nose.draw(window)
+    
+proj4_2()
+    
