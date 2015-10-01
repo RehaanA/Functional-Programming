@@ -23,3 +23,19 @@ def proj5_2():
     if examScore >= 0 and examScore <= 54:
         print("F")
 proj5_2()
+
+def proj5_3():
+    print("This is an acronym program!")
+    phrase = input("Type in your phrase here: ")
+    
+    phrase1 = phrase.replace("of", "").replace("and", "")
+    phrase1.replace("and", "")
+    
+    for x in phrase1.split():
+        outputList = []
+        outputList.append(x[0].capitalize())
+
+        for y in outputList:
+            print(y, end = "")
+proj5_3()
+
