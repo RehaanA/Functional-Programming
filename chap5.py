@@ -29,8 +29,7 @@ def proj5_3():
     phrase = input("Type in your phrase here: ")
     
     phrase1 = phrase.replace("of", "").replace("and", "")
-    phrase1.replace("and", "")
-    
+
     for x in phrase1.split():
         outputList = []
         outputList.append(x[0].capitalize())
