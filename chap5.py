@@ -28,7 +28,7 @@ def proj5_3():
     print("This is an acronym program!")
     phrase = input("Type in your phrase here: ")
     
-    phrase1 = phrase.replace("of", "").replace("and", "")
+    phrase1 = phrase.replace("of", "").replace("and", "").replace("the", "") 
 
     for x in phrase1.split():
         outputList = []
