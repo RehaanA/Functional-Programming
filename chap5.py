@@ -38,3 +38,20 @@ def proj5_3():
             print(y, end = "")
 proj5_3()
 
+def proj5_4():
+    file = input("enter your file: ")
+    myFile = open(file, "r")
+
+    characterArray = []
+
+    for word in myFile:
+        print("There are", len(word.split()), "words.")
+        words = word.split()
+
+        for char in words:
+            for i in char:
+                characterArray.append(i)
+
+    print("There are", len(characterArray), "characters.")
+proj5_4()
+
