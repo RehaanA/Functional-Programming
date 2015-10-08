@@ -53,5 +53,8 @@ def proj5_4():
                 characterArray.append(i)
 
     print("There are", len(characterArray), "characters.")
+
+    lines = myFile.readlines()
+    print("There are", len(lines), "lines.")                     
 proj5_4()
 
