@@ -1,19 +1,27 @@
 #Rehaan Advani
 #Chapter 6 Programming Assignments
 
+def proj6_1():
+    s = input("enter a word or phrase: ")
+    formattedStr = right_justify(s)
+    print(formattedStr)
+    
 def right_justify(s):
-    print((70-len(s))*' '+s)
-right_justify("allen")
+    format = (70-len(s))*' '+s
+    return format
+proj6_1()
 
 def proj6_2():
-    colCell = "+----+----+"
-    rowCell = "|    |    |"
+    colCell = "+ - - - - + - - - - +"
+    rowCell = "|         |         |"
     print(colCell)
     for i in range(4):
         print(rowCell)
+        print()
     print(colCell)
     for i in range(4):
         print(rowCell)
+        print()
     print(colCell)
 proj6_2()
 
