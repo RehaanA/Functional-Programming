@@ -17,7 +17,55 @@ def proj6_2():
     print(colCell)
 proj6_2()
 
-#PROBLEM 3
+def proj6_3():
+    animal = input("Enter an animal: ")
+    str1 = "There was a farmer, had a dog,"
+    str2 = "and Bingo was his name-o."
+    str3 = "B-I-N-G-O"
+    str4 = "(clap)-I-N-G-O"
+    str5 = "(clap)-(clap)-N-G-O"
+    str6 = "(clap)-(clap)-(clap)-G-O"
+    str7 = "(clap)-(clap)-(clap)-(clap)-O"
+    str8 = "(clap)-(clap)-(clap)-(clap)-(clap)"
+
+    print(str1)
+    print(str2)
+    for i in range(3):
+        print(str3)
+    print(str2)
+    print()
+    print(str1)
+    print(str2)
+    for i in range(3):
+        print(str4)
+    print(str2)
+    print()
+    print(str1)
+    print(str2)
+    for i in range(3):
+        print(str5)
+    print(str2)
+    print()
+    print(str1)
+    print(str2)
+    for i in range(3):
+        print(str6)
+    print(str2)
+    print()
+    print(str1)
+    print(str2)
+    for i in range(3):
+        print(str7)
+    print(str2)
+    print()
+    print(str1)
+    print(str2)
+    for i in range(3):
+        print(str8)
+    print(str2)
+    
+    
+proj6_3()
 
 def proj6_4():
     firstTerm = eval(input("Enter the first term of the series: "))
@@ -51,7 +99,7 @@ proj6_4()
 
 def calcArea():
     percL, percW = eval(input("Enter the perceived length and width separated by commas: "))
-    actL, actW = eval(input("Wnter the actual length and width values separated by commas: "))
+    actL, actW = eval(input("Enter the actual length and width values separated by commas: "))
 
     percArea = percL * percW
     actArea = actL * actW
@@ -62,7 +110,7 @@ def calcArea():
     print()
     print("The actual area is", actArea)
     print()
-    print("The percent error is", percError, 9"%")
+    print("The percent error is", percError, "%")
     print()
 
 def percentError(p, a):
