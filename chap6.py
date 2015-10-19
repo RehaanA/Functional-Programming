@@ -36,6 +36,7 @@ def proj6_3():
     str7 = "(clap)-(clap)-(clap)-(clap)-O"
     str8 = "(clap)-(clap)-(clap)-(clap)-(clap)"
 
+    print()
     print(str1)
     print(str2)
     for i in range(3):
@@ -71,7 +72,7 @@ def proj6_3():
     for i in range(3):
         print(str8)
     print(str2)
-    
+    print()
     
 proj6_3()
 
@@ -127,5 +128,5 @@ def percentError(p, a):
     decimal = diff / a
     perc = decimal * 100
     return perc
-    
 calcArea()
+
