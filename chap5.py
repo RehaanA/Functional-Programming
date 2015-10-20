@@ -58,3 +58,31 @@ def proj5_4():
     print("There are", len(lines), "lines.")                     
 proj5_4()
 
+def proj5_5():
+    print("This is an almortization calculator program!")
+    numMonthlyPayments = eval(input("Enter the number of monthly payments: "))
+    numYears = eval(input("Number of years: "))
+    
+    n = numMonthlyPayments * 12 * numYears
+
+    print("Now we are going to determine the monthly payment.")
+    print()
+
+    p = eval(input("Enter the loan's initial amount: "))
+    i = eval(input("Enter the monthly interest rate as a decimal: "))
+
+    reusableExpr = 1+i
+    a = i * p * reusableExpr**n / reusableExpr**n - 1
+
+    totalCost = n * a
+    interest = totalCost - p
+
+
+    for i in range(n):
+        x = p * i
+        y = a - x
+        z = p - y
+        print(str(i + 1) + "|" + str(a) + "|" + str(y) + "|" + str(x) + "|" + str(z) + "|")
+    
+proj5_5()
+
