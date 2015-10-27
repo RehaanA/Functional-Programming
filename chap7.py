@@ -73,8 +73,4 @@ def proj7_3():
     except:
         print("\nOops, something went wrong.")
 
-    cost = 0
-
-    if length == 2:
-        cost = 1.15
-        print("The total cost of your call is", cost)
+proj7_3()
