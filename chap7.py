@@ -2,6 +2,7 @@
 #Chapter 7 Programming Assignments
 
 def proj7_1():
+    print()
     print("This program tells the you if you have a right triangle!")
     
     try:
@@ -73,4 +74,84 @@ def proj7_3():
     except:
         print("\nOops, something went wrong.")
 
+    cost = 0
+
+    if length < 2:
+        cost = 1.15
+        print("The total cost of your call is", cost)
+    else:
+        addLength = length - 2
+        addLengthCost = addLength * 0.5
+        totalCost = addLengthCost + 1.15
+        print("The total cost of your call is", totalCost)
+
 proj7_3()
+
+def proj7_4():
+    print()
+    print("This program calculates the letter grade for a given mat exam score.")
+
+    try:
+        score = eval(input("Please enter in the math score: "))
+    except:
+        print("\nOops, something went wrong.")
+
+    if score >= 87.5 and score <= 100:
+        print("A")
+    elif score >= 76.5 and score <= 87.4:
+        print("B")
+    elif score >= 65.5 and score <= 76.4:
+        print("C")
+    elif score >= 54.5 and score <= 65.4:
+        print("D")
+    else:
+        print("F")
+proj7_4()
+
+def proj7_5():
+    print()
+
+    try:
+        numBagLitter = eval(input("Enter in the number of bags of litter: "))
+    except:
+        print("\nOops, something went wrong.")
+
+    if numBagLitter <= 10:
+        portFine = numBagLitter * 10
+        totalFine = portFine + 75
+        print("Your total fine is", totalFine)
+    else:
+        portFine = numBagLitter * 10
+        portFine2 = 75
+        totalFine = portFine + portFine2 + 500
+        print("Your total fine is ${0}.".format(totalFine))
+proj7_5()
+
+def proj7_6():
+    print()
+
+    try:
+        start = eval(input("Enter your starting time as a decimal: "))
+        end = eval(input("Enter your end time as a decimal: "))
+    except:
+        print("\nOops, something went wrong.")
+
+
+def proj7_7():
+    print()
+
+    try:
+       x, y, z = eval(input("Enter in the dimensions of the prism separated by commas: "))
+    except:
+        print("\nOops, something went wrong.")
+
+    estVol = x * y * z
+    xArray = []
+
+    splitX = str(x).split(".")
+    splitXIndex = splitX[1]
+    for i in splitXIndex.split(): #Only 1 element (Not splitting after every number)
+        xArray.append(i)
+    numDec = len(xArray) + 1
+    print(numDec)
+proj7_7()
