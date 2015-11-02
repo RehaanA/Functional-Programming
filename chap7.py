@@ -1,6 +1,8 @@
 #Rehaan Advani
 #Chapter 7 Programming Assignments
 
+from decimal import *
+
 def proj7_1():
     print()
     print("This program tells the you if you have a right triangle!")
@@ -146,12 +148,32 @@ def proj7_7():
         print("\nOops, something went wrong.")
 
     estVol = x * y * z
-    xArray = []
 
-    splitX = str(x).split(".")
-    splitXIndex = splitX[1]
-    for i in splitXIndex.split(): #Only 1 element (Not splitting after every number)
-        xArray.append(i)
-    numDec = len(xArray) + 1
-    print(numDec)
+    xErr = 0
+    yErr = 0
+    zErr = 0
+
+    decX = abs(Decimal(str(x)).as_tuple().exponent)
+    decY = abs(Decimal(str(y)).as_tuple().exponent)
+    decZ = abs(Decimal(str(z)).as_tuple().exponent)
+
+    if decX == 0:
+       xErr = 0.5
+    if decY == 0:
+        yErr = 0.5
+    if decZ == 0:
+        zErr = 0.5
+
+    minVol = (x-xErr)*(y-yErr)*(z-zErr)
+    maxVol = (x+xErr)*(y+yErr)*(z+zErr)
+
+    minMeasured = abs(minVol - estVol) / estVol
+    maxMeasured = abs(maxVol - estVol) / estVol
+
+    if minMeasured > maxMeasured:
+        print("The greatest possible error is", minMeasured, "%")
+    else:
+        print("The greatest possible error is", maxMeasured, "%")
+    
 proj7_7()
+    
